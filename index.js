@@ -59,3 +59,9 @@ function getAllScubaSets() {
     return scubaDivingSets;
 }
 // console.log(getAllScubaSets())
+
+//read a single diving set by id
+function getDivingSetById(uniqueId) {
+    return scubaDivingSets.find(scuba => scuba.uniqueId === uniqueId) || null;
+}
+// console.log(getDivingSetById("54XSm6JalSN80lSOEBTAo"));
