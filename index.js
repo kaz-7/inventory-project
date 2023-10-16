@@ -32,12 +32,8 @@ function randomGear() {
     ];
     return gear[Math.floor(Math.random() * gear.length)];
 }
+// console.log(randomGear());
 
-// for(let i = 0; i < 5; i++) {
-//     addScubaDivingSet();
-// }
-
-fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
 
 //create method
 function addScubaDivingSet() {
@@ -49,7 +45,7 @@ function addScubaDivingSet() {
         inStock: Math.random() > 0.5,
         uniqueId: nanoid()
     })
-    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
+    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets, null, 2));
     return scubaDivingSets[scubaDivingSets.length - 1];
 }
 // console.log(addScubaDivingSet());
@@ -64,24 +60,26 @@ function getAllScubaSets() {
 function getDivingSetById(uniqueId) {
     return scubaDivingSets.find(scuba => scuba.uniqueId === uniqueId) || null;
 }
-// console.log(getDivingSetById("54XSm6JalSN80lSOEBTAo"));
+// console.log(getDivingSetById("7mWw2cu2PoVFAGBwikAAf"));
 
 //updates an index value
-function updateScubaSet(index, newScubaData) {
+function updateScubaSet(uniqueId, newScubaData) {
+    const index = scubaDivingSets.findIndex(element => element.uniqueId === uniqueId);
     scubaDivingSets[index] = {
-        ...scubaDivingSets[index], ...newScubaData
+        ...scubaDivingSets[index], 
+        ...newScubaData
     }
-    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
+    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets, null, 2));
     return scubaDivingSets[index];
 }
-// console.log(updateScubaSet(4, { gear: [randomGear(), randomGear(), randomGear(), randomGear()] }));
+// console.log(updateScubaSet("waQZ_YXDWPvhXwpwvGYEo", { gear: [randomGear(), randomGear(), randomGear(), randomGear()] }));
 
 //removes a value at an index
 function removeScubaSet(index) {
-    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
+    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets, null, 2));
    return scubaDivingSets.splice(index, 1);
 }
 // console.log(removeScubaSet(2));
 
 
-module.exports = { removeScubaSet, updateScubaSet, getDivingSetById, getAllScubaSets, addScubaDivingSet };
+module.exports = { removeScubaSet, updateScubaSet, getDivingSetById, getAllScubaSets, addScubaDivingSet, randomGear };
