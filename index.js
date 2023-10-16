@@ -53,3 +53,9 @@ function addScubaDivingSet() {
     return scubaDivingSets[scubaDivingSets.length - 1];
 }
 // console.log(addScubaDivingSet());
+
+//read method
+function getAllScubaSets() {
+    return scubaDivingSets;
+}
+// console.log(getAllScubaSets())
