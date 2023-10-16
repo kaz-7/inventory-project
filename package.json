@@ -1,0 +1,19 @@
+{
+  "name": "inventory-project",
+  "version": "1.0.0",
+  "description": "app to help employees keep track of inventory",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "nanoid": "^3.3.6",
+    "save-dev": "^0.0.1-security"
+  }
+}
