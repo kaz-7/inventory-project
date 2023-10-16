@@ -65,3 +65,13 @@ function getDivingSetById(uniqueId) {
     return scubaDivingSets.find(scuba => scuba.uniqueId === uniqueId) || null;
 }
 // console.log(getDivingSetById("54XSm6JalSN80lSOEBTAo"));
+
+//updates an index value
+function updateScubaSet(index, newScubaData) {
+    scubaDivingSets[index] = {
+        ...scubaDivingSets[index], ...newScubaData
+    }
+    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
+    return scubaDivingSets[index];
+}
+// console.log(updateScubaSet(4, { gear: [randomGear(), randomGear(), randomGear(), randomGear()] }));
