@@ -75,3 +75,13 @@ function updateScubaSet(index, newScubaData) {
     return scubaDivingSets[index];
 }
 // console.log(updateScubaSet(4, { gear: [randomGear(), randomGear(), randomGear(), randomGear()] }));
+
+//removes a value at an index
+function removeScubaSet(index) {
+    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
+   return scubaDivingSets.splice(index, 1);
+}
+// console.log(removeScubaSet(2));
+
+
+module.exports = { removeScubaSet, updateScubaSet, getDivingSetById, getAllScubaSets, addScubaDivingSet };
