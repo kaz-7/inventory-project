@@ -40,3 +40,16 @@ function randomGear() {
 fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
 
 //create method
+function addScubaDivingSet() {
+    scubaDivingSets.push({
+        name: faker.company.name(),
+        color: faker.color.human(),
+        gear: [randomGear(), randomGear(), randomGear(), randomGear()],
+        priceInCents: Math.floor(Math.random() * (500000 - 200000 + 1) + 200000),
+        inStock: Math.random() > 0.5,
+        uniqueId: nanoid()
+    })
+    fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets));
+    return scubaDivingSets[scubaDivingSets.length - 1];
+}
+// console.log(addScubaDivingSet());
