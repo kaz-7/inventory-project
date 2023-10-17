@@ -1,11 +1,15 @@
-const { randomGear, getDivingSetById, removeScubaSet } = require("../index");
+const { generateSet, addScubaDivingSet, randomGear, getDivingSetById, removeScubaSet, updateScubaSet } = require("../index");
+const { faker } = require("@faker-js/faker");
+const { nanoid } = require("nanoid");
 
 
-describe("testing randomGear()", () => {
-    it("returns a string representing the value at a random index", () => {
-        expect(randomGear()).toBe("fins");
+describe("testing addScubaDivingSet()", () => {
+    it("returns the value of an added object", () => {
+        const newScubaSet = generateSet();
+        expect(addScubaDivingSet(newScubaSet)).toEqual(newScubaSet);
     })
 })
+
 
 describe("testing getDivingSetById()", () => {
     it("returns an object matching the given id", () => {
@@ -23,8 +27,22 @@ describe("testing getDivingSetById()", () => {
     })
 })
 
+describe("updateScubaSet()", () => {
+    it("returns an object with the updated data if it matches the given id", () => {
+        const randomGearArray = [randomGear(), randomGear(), randomGear(), randomGear()];
+        expect(updateScubaSet("waQZ_YXDWPvhXwpwvGYEo", { gear: randomGearArray })).toEqual({
+            name: 'Schumm, Leffler and Walsh',
+            color: 'purple',
+            gear: randomGearArray,
+            priceInCents: 278637,
+            inStock: true,
+            uniqueId: 'waQZ_YXDWPvhXwpwvGYEo'
+        })
+    })
+})
+
 describe ("testing removeScubaSet()", () => {
-    it("returns the removed object inside an array",() =>{
+    it("returns the value of a removed object",() =>{
         expect(removeScubaSet(2)).toEqual([
             {
               name: 'Stanton Group',
@@ -34,6 +52,6 @@ describe ("testing removeScubaSet()", () => {
               inStock: false,
               uniqueId: '32vdq6X2ncn8EKLA4hR7G'
             }
-          ])
+        ])
     })
 })

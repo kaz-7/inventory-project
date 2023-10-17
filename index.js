@@ -2,6 +2,7 @@ const { faker } = require("@faker-js/faker");
 const fs = require("fs");
 const { nanoid } = require("nanoid");
 const scubaDivingSets = require("./scubaDivingSets.json");
+// const { chalk } = require("chalk");
 
 // const scubaDivingSets = [
 //     {
@@ -35,20 +36,26 @@ function randomGear() {
 // console.log(randomGear());
 
 
-//create method
-function addScubaDivingSet() {
-    scubaDivingSets.push({
+//creates object to add to json
+function generateSet() {
+    return {
         name: faker.company.name(),
         color: faker.color.human(),
         gear: [randomGear(), randomGear(), randomGear(), randomGear()],
         priceInCents: Math.floor(Math.random() * (500000 - 200000 + 1) + 200000),
         inStock: Math.random() > 0.5,
         uniqueId: nanoid()
-    })
+    }
+}
+
+
+//create method
+function addScubaDivingSet(scubaSet) {
+    scubaDivingSets.push(scubaSet);
     fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets, null, 2));
     return scubaDivingSets[scubaDivingSets.length - 1];
 }
-// console.log(addScubaDivingSet());
+// console.log(addScubaDivingSet(generateSet()));
 
 //read method
 function getAllScubaSets() {
@@ -81,5 +88,34 @@ function removeScubaSet(index) {
 }
 // console.log(removeScubaSet(2));
 
+let cart = [];
 
-module.exports = { removeScubaSet, updateScubaSet, getDivingSetById, getAllScubaSets, addScubaDivingSet, randomGear };
+function addItemToCart(uniqueId, cart) {
+    const itemData = scubaDivingSets.find(scuba => scuba.uniqueId === uniqueId) || null;
+
+    const item = { name: itemData.name, priceInCents: itemData.priceInCents, inStock: itemData.inStock }
+
+    cart.push(item)
+    return cart;
+    //   updateCart();
+    }
+// console.log(addItemToCart("32vdq6X2ncn8EKLA4hR7G"))
+
+function emptyCart(cart){
+    cart = [];
+    return cart;
+    }
+
+function viewCart(cart) {
+    if (cart.length === 0) {
+        console.log('The cart is empty.');
+    } else {
+        console.log('Items in the cart:');
+        cart.forEach(item => {
+            console.log('- ${item.name} | Price: $${item.priceInCents} | inStock: ${item.inStock}');
+        });
+    }
+}
+// console.log(viewCart(cart))
+
+module.exports = { generateSet, removeScubaSet, updateScubaSet, getDivingSetById, getAllScubaSets, addScubaDivingSet, randomGear };

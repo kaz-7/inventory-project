@@ -68,13 +68,78 @@
     "name": "Schumm, Leffler and Walsh",
     "color": "purple",
     "gear": [
-      "safety reel",
+      "mask",
+      "buoyancy control device",
       "regulator",
-      "boots",
-      "boots"
+      "tank"
     ],
     "priceInCents": 278637,
     "inStock": true,
     "uniqueId": "waQZ_YXDWPvhXwpwvGYEo"
+  },
+  {
+    "name": "O'Connell - Sawayn",
+    "color": "fuchsia",
+    "gear": [
+      "dive computer",
+      "tank",
+      "safety reel",
+      "regulator"
+    ],
+    "priceInCents": 254985,
+    "inStock": true,
+    "uniqueId": "HlLEOwiQhAU3pN2_LZHTE"
+  },
+  {
+    "name": "Kerluke, Mann and Hackett",
+    "color": "silver",
+    "gear": [
+      "mask",
+      "snorkel",
+      "snorkel",
+      "tank"
+    ],
+    "priceInCents": 455662,
+    "inStock": true,
+    "uniqueId": "VcZq4bfMP1BzQHKggFOMl"
+  },
+  {
+    "name": "Anderson - Dicki",
+    "color": "cyan",
+    "gear": [
+      "wetsuit",
+      "Z-knife",
+      "mask",
+      "dive computer"
+    ],
+    "priceInCents": 205087,
+    "inStock": true,
+    "uniqueId": "J4fkvpktuPMZV9w9EeY5R"
+  },
+  {
+    "name": "Skiles - Wilkinson",
+    "color": "plum",
+    "gear": [
+      "tank",
+      "safety reel",
+      "safety reel",
+      "wetsuit"
+    ],
+    "priceInCents": 234721,
+    "inStock": false,
+    "uniqueId": "9pXaCJXpfKmfjj9ffmN7g"
+  },
+  {
+    "name": "Vandervort, Lemke and Blick",
+    "color": "yellow",
+    "gear": [
+      "dive computer",
+      "boots",
+      "submersible pressure gauge",
+      "dive computer"
+    ],
+    "priceInCents": 352137,
+    "inStock": true,
+    "uniqueId": "MPIEmQd4R8RopBjNngbuN"
   }
 ]
