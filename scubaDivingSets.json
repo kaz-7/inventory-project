@@ -3,10 +3,10 @@
     "name": "Stanton Group",
     "color": "orange",
     "gear": [
-      "buoyancy control device",
       "safety reel",
+      "wetsuit",
       "safety reel",
-      "fins"
+      "wetsuit"
     ],
     "priceInCents": 373991,
     "inStock": false,
@@ -26,102 +26,116 @@
     "uniqueId": "6If5OjA33GX0_ze6j1UGw"
   },
   {
-    "name": "Schmidt and Sons",
-    "color": "cyan",
-    "gear": [
-      "safety reel",
-      "mask",
-      "dive computer",
-      "fins"
-    ],
-    "priceInCents": 354223,
+    "name": "Crist, Dare and Gulgowski",
+    "color": "blue",
+    "gear": "fins",
+    "priceInCents": 366955,
     "inStock": false,
-    "uniqueId": "ZVTXaN4kLe_n3uTGDbxLK"
+    "uniqueId": "FCDNHXbRkKxfbv8rpc55U"
   },
   {
-    "name": "Schumm, Leffler and Walsh",
-    "color": "purple",
-    "gear": [
-      "mask",
-      "buoyancy control device",
-      "regulator",
-      "tank"
-    ],
-    "priceInCents": 278637,
-    "inStock": true,
-    "uniqueId": "waQZ_YXDWPvhXwpwvGYEo"
+    "name": "Mohr - Hauck",
+    "color": "cyan",
+    "gear": "snorkel",
+    "priceInCents": 252405,
+    "inStock": false,
+    "uniqueId": "okb_1IYB_W_UmcV9P0hwE"
   },
   {
-    "name": "O'Connell - Sawayn",
-    "color": "fuchsia",
-    "gear": [
-      "dive computer",
-      "tank",
-      "safety reel",
-      "regulator"
-    ],
-    "priceInCents": 254985,
-    "inStock": true,
-    "uniqueId": "HlLEOwiQhAU3pN2_LZHTE"
-  },
-  {
-    "name": "Kerluke, Mann and Hackett",
+    "name": "Kerluke, Weber and Leffler",
     "color": "silver",
-    "gear": [
-      "mask",
-      "snorkel",
-      "snorkel",
-      "tank"
-    ],
-    "priceInCents": 455662,
-    "inStock": true,
-    "uniqueId": "VcZq4bfMP1BzQHKggFOMl"
-  },
-  {
-    "name": "Anderson - Dicki",
-    "color": "cyan",
-    "gear": [
-      "wetsuit",
-      "Z-knife",
-      "mask",
-      "dive computer"
-    ],
-    "priceInCents": 205087,
-    "inStock": true,
-    "uniqueId": "J4fkvpktuPMZV9w9EeY5R"
-  },
-  {
-    "name": "Skiles - Wilkinson",
-    "color": "plum",
-    "gear": [
-      "tank",
-      "safety reel",
-      "safety reel",
-      "wetsuit"
-    ],
-    "priceInCents": 234721,
+    "gear": "Z-knife",
+    "priceInCents": 472464,
     "inStock": false,
-    "uniqueId": "9pXaCJXpfKmfjj9ffmN7g"
+    "uniqueId": "kY75lDEvFMuzjb_-K3Afa"
   },
   {
-    "name": "Vandervort, Lemke and Blick",
-    "color": "yellow",
-    "gear": [
-      "dive computer",
-      "boots",
-      "submersible pressure gauge",
-      "dive computer"
-    ],
-    "priceInCents": 352137,
+    "name": "Baumbach - Langosh",
+    "color": "ivory",
+    "gear": "buoyancy control device",
+    "priceInCents": 324992,
     "inStock": true,
-    "uniqueId": "MPIEmQd4R8RopBjNngbuN"
+    "uniqueId": "uTAaL5dh9tPyZjS0qspog"
   },
   {
-    "name": "goggles",
+    "name": "Renner and Sons",
+    "color": "magenta",
+    "gear": "tank",
+    "priceInCents": 371627,
+    "inStock": false,
+    "uniqueId": "v0tDrqyLPpF-oMA_M4BRF"
+  },
+  {
+    "name": "Abbott Group",
+    "color": "sky blue",
+    "gear": "wetsuit",
+    "priceInCents": 386751,
+    "inStock": true,
+    "uniqueId": "FP5kktB5nrZ_MHlwZHKPT"
+  },
+  {
+    "name": "Quitzon - Jones",
+    "color": "orchid",
+    "gear": "snorkel",
+    "priceInCents": 368645,
+    "inStock": false,
+    "uniqueId": "x9ajVMavrBmZ9AbxiIuPX"
+  },
+  {
+    "name": "Greenholt - Mante",
     "color": "red",
-    "priceInCents": "335656",
-    "inStock": "false",
-    "uniqueId": "WgZaigvcHJjoKPRTE62B2",
-    "gear": "submersible pressure gauge"
+    "gear": "submersible pressure gauge",
+    "priceInCents": 436921,
+    "inStock": true,
+    "uniqueId": "9IT2m56Lepvt5qoRs-lrn"
+  },
+  {
+    "name": "Wilkinson, Murazik and McKenzie",
+    "color": "teal",
+    "gear": "fins",
+    "priceInCents": 302223,
+    "inStock": true,
+    "uniqueId": "sCPofV8E8pCR9fpjUWcLO"
+  },
+  {
+    "name": "Paucek, Schuppe and Rau",
+    "color": "black",
+    "gear": "mask",
+    "priceInCents": 497875,
+    "inStock": false,
+    "uniqueId": "IjSzMXpQsF7KIXRTLyGiP"
+  },
+  {
+    "name": "scuba",
+    "color": "blue",
+    "priceInCents": "345656",
+    "inStock": "true",
+    "uniqueId": "dMlhhbBqwhHkXTNWYg78O",
+    "gear": "tank"
+  },
+  "\u001b[31m\u001b[1m[object Object]\u001b[22m\u001b[39m",
+  {
+    "name": "scuba",
+    "color": "blue",
+    "priceInCents": "345656",
+    "inStock": "true",
+    "uniqueId": "\u001b[31m\u001b[1milQ7Bxv2cX6Zos8sRgUcl\u001b[22m\u001b[39m",
+    "gear": "\u001b[31m\u001b[1mZ-knife\u001b[22m\u001b[39m"
+  },
+  {
+    "name": "scuba",
+    "color": "blue",
+    "priceInCents": "345656",
+    "inStock": "true",
+    "uniqueId": "eid8x6pW53by46vjQCCj-",
+    "gear": "fins"
+  },
+  {
+    "name": "scuba",
+    "color": "blue",
+    "priceInCents": "345656",
+    "inStock": "true",
+    "uniqueId": "4sBdeYRpkBx2viyoy1BaJ",
+    "gear": "Z-knife"
   }
 ]

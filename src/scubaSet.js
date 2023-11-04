@@ -65,9 +65,9 @@ function updateScubaSet(uniqueId, newScubaData) {
 
 //removes a value at an index
 function removeScubaSet(index) {
-    scubaDivingSets.splice(index, 1);
+    const removedSet = scubaDivingSets.splice(index, 1);
     fs.writeFileSync("./scubaDivingSets.json", JSON.stringify(scubaDivingSets, null, 2));
-   return "deleted";
+   return removedSet;
 }
 
 module.exports = {
